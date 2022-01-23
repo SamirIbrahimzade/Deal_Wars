@@ -63,7 +63,9 @@ class FindFragment : Fragment(), FindView {
     }
 
     override fun showError() {
-        Toast.makeText(requireContext(), "Nəticə tapılmadı", Toast.LENGTH_LONG).show()
+        requireActivity().runOnUiThread{
+            Toast.makeText(requireContext(), "Nəticə tapılmadı", Toast.LENGTH_LONG).show()
+        }
     }
 
     fun configureBack() {

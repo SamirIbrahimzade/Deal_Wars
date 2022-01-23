@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_fragment"
+    style="?attr/bottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet"
+    app:behavior_peekHeight="400dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="14dp"
+
+            android:background="@color/gray4" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/divider">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Macbook pro m1"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <include
+                    android:id="@+id/price"
+                    layout="@layout/item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp" />
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/tv_seller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/price"
+                    android:layout_marginTop="15dp"
+                    android:text="Amazon"
+                    android:textColor="@color/gray6"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_copy_url"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_seller"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/black"
+                    android:text="LİNKİ Götür" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_extra_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/btn_copy_url"
+                    android:layout_marginTop="15dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp" />
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

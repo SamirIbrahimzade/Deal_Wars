@@ -11,4 +11,6 @@ Design Patterns: Use Cases(Interactor or screaming architecture, we call invoke 
 
 More tech: view binding, coroutine, retrofit
 
+Finally, we do not have dark mode in the app, please test in light theme for best color accuracy. :)
+
 Apk url: https://drive.google.com/file/d/1LgDNb6nSQEoYkhdhyH8Hqcc8270sVW8s/view?usp=drivesdk

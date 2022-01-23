@@ -11,4 +11,4 @@ Design Patterns: Use Cases(Interactor or screaming architecture, we call invoke 
 
 More tech: view binding, coroutine, retrofit
 
-Apk url: 
+Apk url: https://drive.google.com/file/d/1LgDNb6nSQEoYkhdhyH8Hqcc8270sVW8s/view?usp=drivesdk
